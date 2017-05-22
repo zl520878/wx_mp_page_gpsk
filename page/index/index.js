@@ -99,6 +99,9 @@ Page({
 			total: 11,
 			list: {1:1, 2:3}
 		},
+		shop:{
+			name:""
+		},
 		showCartDetail: false
 	},
 	onLoad: function (options) {
@@ -106,7 +109,7 @@ Page({
 		for (var i = 0; i < app.globalData.shops.length; ++i) {
 			if (app.globalData.shops[i].id == shopId) {
 				this.setData({
-					shop: app.globalData.shops[i]
+					shop: this.data.shopDesc //app.globalData.shops[i]
 				});
 				break;
 			}

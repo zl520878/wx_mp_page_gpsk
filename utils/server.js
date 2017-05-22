@@ -12,7 +12,8 @@ function __args() {
 		}
 	}
 	if (setting.url.indexOf('https://') !== 0) {
-		setting.url = 'https://wxapp.im20.com.cn' + setting.url;
+		// setting.url = 'https://wxapp.im20.com.cn' + setting.url;
+		setting.url = 'https://www.pps0.com/rest' + setting.url;
 	}
 	return setting;
 }
@@ -34,7 +35,7 @@ module.exports = {
 	sendTemplate: function(formId, templateData, success, fail) {
 		var app = getApp();
 		this.getJSON({
-			url: '/WxAppApi/sendTemplate',
+			url: '/out/shopinfo',
 			data: {
 				rd_session: app.rd_session,
 				form_id: formId,
